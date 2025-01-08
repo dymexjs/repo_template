@@ -30,7 +30,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 ## Code of Conduct
 
 This project and everyone participating in it is governed by the
-[@dymexjs Code of Conduct](<https://github.com/dymexjs/repo_template/blob/main/.github/CODE_OF_CONDUCT.md>).
+[@dymexjs Code of Conduct][].
 By participating, you are expected to uphold this code. Please report unacceptable behavior
 to <dymexjs@gmail.com>.
 
@@ -192,6 +192,7 @@ This guide is based on the [contributing.md](https://contributing.md/generator)!
 
 ~~Correct links~~
 
+[@dymexjs Code of Conduct]: <https://github.com/dymexjs/repo_template/blob/main/.github/CODE_OF_CONDUCT.md>
 [Issues]: <https://github.com/dymexjs/repo_template/issues>
 [New Issue]: <https://github.com/dymexjs/repo_template/issues/new>
 [Documentation]: ../README.md
