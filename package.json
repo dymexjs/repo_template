@@ -1,0 +1,44 @@
+{
+  "name": "~~name of the project~~",
+  "version": "v1.0.5",
+  "description": "~~description of the project~~",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OWNER/repo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OWNER/repo/issues"
+  },
+  "scripts": {
+    "build": "npx tsc -p tsconfig.json",
+    "lint": "eslint",
+    "test": "globstar -- node --import tsx --test \"tests/**/*.test.ts\"",
+    "test:coverage": "globstar -- node --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=lcov.info --import tsx --test \"tests/**/*.test.ts\"",
+    "test:watch": "globstar -- node --import tsx --test --watch \"tests/**/*.test.ts\"",
+    "format": "prettier --config .prettierrc \"src/**/*.ts\" \"tests/**/*.ts\" --write",
+    "prepare": "npm run build",
+    "preversion": "npm run lint && npm test",
+    "version": "npm run format && git add -A .",
+    "postversion": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-security": "^3.0.1",
+    "globals": "^15.14.0",
+    "globstar": "^1.0.0",
+    "prettier": "3.3.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.19.1"
+  },
+  "author": "~~name of the author~~",
+  "license": "ISC"
+}
